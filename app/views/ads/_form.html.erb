@@ -1,0 +1,47 @@
+<%= form_with(model: ad) do |form| %>
+  <% if ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+
+      <ul>
+        <% ad.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pc_url %>
+    <%= form.text_field :pc_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ios_url %>
+    <%= form.text_field :ios_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :and_url %>
+    <%= form.text_field :and_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cl_image %>
+    <%= form.file_field :cl_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

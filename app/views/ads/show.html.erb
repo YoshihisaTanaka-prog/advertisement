@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @ad.text %>
+</p>
+
+<p>
+  <strong>Pc url:</strong>
+  <%= @ad.pc_url %>
+</p>
+
+<p>
+  <strong>Ios url:</strong>
+  <%= @ad.ios_url %>
+</p>
+
+<p>
+  <strong>And url:</strong>
+  <%= @ad.and_url %>
+</p>
+
+<p>
+  <strong>Cl image:</strong>
+  <%= cl_image_tag(@ad.cl_image.retina.filename) %>
+</p>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

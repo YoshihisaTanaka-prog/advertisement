@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Pc url</th>
+      <th>Ios url</th>
+      <th>And url</th>
+      <th>Cl image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ads.each do |ad| %>
+      <tr>
+        <td><%= ad.title %></td>
+        <td><%= ad.text %></td>
+        <td><%= ad.pc_url %></td>
+        <td><%= ad.ios_url %></td>
+        <td><%= ad.and_url %></td>
+        <td><%= cl_image_tag(ad.cl_image.retina.filename) %></td>
+        <td><%= link_to 'Show', ad %></td>
+        <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+        <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad', new_ad_path %>

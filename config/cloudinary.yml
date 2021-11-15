@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dmiakqdjr
+  api_key: '369146348283324'
+  api_secret: ILHDlBklfeGsZAyX9Egm1XKb9ow
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dmiakqdjr
+  api_key: '369146348283324'
+  api_secret: ILHDlBklfeGsZAyX9Egm1XKb9ow
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dmiakqdjr
+  api_key: '369146348283324'
+  api_secret: ILHDlBklfeGsZAyX9Egm1XKb9ow
+  enhance_image_tag: true
+  static_file_support: false
